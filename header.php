@@ -85,6 +85,42 @@
 	<?php /*  Call To Action - Intro */ consulting_thinkup_input_ctaintro(); ?>
 	<?php /*  Pre-Designed HomePage Content */ consulting_thinkup_input_homepagesection(); ?>
 
+	<?php 
+		if(is_front_page()) {
+				$posts = get_posts([
+				  'post_type' => 'quicklink',
+				  'post_status' => 'publish',
+				  'order' => 'ASC'	
+				]);
+				if($posts) {
+		
+	?>
+				<div class="quicklinkcontainers">
+						<div class="mks_col">
+							<div class="mks_one_third quicklinkbox">
+								<img class='optionimage' src='<?= get_field('image', $posts[0]->ID); ?>'/>
+								<h3 class='optiontitle' style='color:<?= get_field('colour', $posts[0]->ID); ?>'><?=$posts[0]->post_title; ?></h3>
+								<p class='optiontext'><?= $posts[0]->post_content;  ?></p>
+								<a href='<?= get_field('action_link', $posts[0]->ID); ?>'><div class='optionbutton'>READ MORE</div></a>
+							</div>
+							<div class="mks_one_third quicklinkbox">
+								<img class='optionimage' src='<?= get_field('image', $posts[1]->ID); ?>'/>
+								<h3 class='optiontitle' style='color:<?= get_field('colour', $posts[1]->ID); ?>'><?=$posts[1]->post_title; ?></h3>
+								<p class='optiontext'><?= $posts[1]->post_content;  ?></p>
+								<a href='<?= get_field('action_link', $posts[1]->ID); ?>'><div class='optionbutton'>READ MORE</div></a>
+							</div>
+							<div class="mks_one_third quicklinkbox">
+								<img class='optionimage' src='<?= get_field('image', $posts[2]->ID); ?>'/>
+								<h3 class='optiontitle' style='color:<?= get_field('colour', $posts[2]->ID); ?>'><?=$posts[2]->post_title; ?></h3>
+								<p class='optiontext'><?= $posts[2]->post_content;  ?></p>
+								<a href='<?= get_field('action_link', $posts[2]->ID); ?>'><div class='optionbutton'>READ MORE</div></a>
+							</div>
+						</div>
+	<?php
+				}
+		}
+    ?>
+
 	<div id="content">
 	<div id="content-core">
 

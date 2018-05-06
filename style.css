@@ -56,16 +56,23 @@ Text Domain: consulting
 */
 
 @font-face {
-		font-family: AileronReg;
+		font-family: Aileron;
 		url("fonts/Aileron-Regular.otf") format("opentype");
 }
 @font-face {
-		font-family: AileronBold;
+		font-family: Aileron;
 		url("Aileron-Bold.otf") format("opentype");
+		font-weight: bolder;
 }
 @font-face {
-		font-family: AileronSemiBold;
+		font-family: Aileron;
 		url("fonts/Aileron-SemiBold.otf") format("opentype");
+		font-weight: bold;
+}
+@font-face {
+		font-family: Aileron;
+		url("fonts/Aileron-Light.otf") format("opentype");
+		font-weight: lighter;
 }
 
 
@@ -163,6 +170,28 @@ a img {
 }
 .screen-reader-text {	
 	display: none;
+}
+
+article {
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-right:5px;
+	padding-left:5px;
+	max-width:1140px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+article h3 {
+	color: #1999d6;
+	font-family:Aileron;
+	font-size:26px;
+}
+
+article p {
+	font-family:Aileron;
+	font-weight:lighter;
+	font-size:16px;
 }
 
 /* ---------------------------------------------------------------------------------------
@@ -449,8 +478,12 @@ a:visited {
 #content {
 	clear: both;
 	margin: 0;
-	padding: 60px 10px 30px;
+	padding: 0px;
 } 
+
+#content-core {
+	max-width:100% !important;
+}
 
 /* Boxed layout */
 body.layout-boxed,
@@ -803,7 +836,8 @@ li.pag-next {
 
 .current_page_item a span {
 	color:white;
-	font-family: AileronSemiBold;
+	font-family: Aileron;
+	font-weight: bold;
 }
 
 #pre-header .header-links > ul > li > a {
@@ -1124,7 +1158,8 @@ li.pag-next {
 	display: block;
 	padding: 8px 14px;
 	margin: 0px;
-	font-family:AileronSemiBold;
+	font-family:Aileron;
+	font-weight:bold;
 }
 #header .header-links .sub-menu,
 #header-sticky .header-links .sub-menu {
@@ -1356,16 +1391,20 @@ li.pag-next {
 .bannerimgcontainer {
     position: relative;
     text-align: center;	
+	max-height:350px;
+	overflow:hidden;
 }
 .bannerimg {
 	width:100%;
+	margin: -75px 0 0 0;
 }
 .bannertitle {
     position: absolute;
-    bottom: -70px;
-    left: 18%;
+    bottom: -85px;
+	left:18%;
 	font-size:140px;
-	font-family: AileronBold;
+	font-family: Aileron;
+	font-weight: bolder;
 	color:white;
 	opacity:0.4;
 }
@@ -5342,7 +5381,6 @@ li.pingback a {
 .page-template-template-parallax-php #content #nav-below,
 .page-template-template-parallax-php #content #comments {
 	display: block;
-	max-width: 1140px;
 	margin: 0 auto
 }
 .page-template-template-parallax-php #content #comments {
@@ -7200,4 +7238,281 @@ span.bar-per {
 body .fa-lg {
 	line-height: 1;
 	vertical-align: -10%;
+}
+
+/*---- Override for team member plugin --- */
+.tmm_photo {
+	border-radius:100px !important;
+	border:none !important;
+	width:200px !important;
+	height:200px !important;
+}
+
+.tmm_member {
+	border:none !important;
+	box-shadow: none !important;
+}
+.tmm_container {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.tmm_desc {
+	font-family: Aileron;
+	font-weight: lighter;
+	text-align: center;
+		width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tmm_fname {
+	font-family: Aileron;
+	color:#1999d6;
+}
+
+.tmm_lname {
+	font-family: Aileron;
+	color:#1999d6;
+}
+.pageseperator {
+	height:150px;
+	background-color:#f1f1f1;
+	width:100%;
+}
+
+.pageseperator::after{
+    color: white;
+    content: attr(data-bg-text);
+    display: inline-block;
+    font-size: 225px;
+    line-height: 1;
+    position: relative;
+	font-family: Aileron;
+	opacity: 0.3;
+	overflow:hidden;
+	z-index:1;
+	margin-top:-40px;
+}
+.pageseptext { 
+	display: inline-block;
+	position:absolute;
+	font-family: Aileron;
+	font-weight: lighter;
+	width:100%;
+	text-align:center;
+	z-index:1001;
+}
+
+.pageseptext h3 {
+	color:#1999d6;
+	font-size:26px;
+	font-weight:bolder;
+	padding-top:30px;
+	z-index:1001;
+    font-family: Aileron;
+}
+.pageseptext p {
+	font-size:18px;
+	font-family: Aileron;
+	font-weight: lighter;
+}
+.mailfooter {
+	height:200px;
+	width:100%;
+	background:url('/wp-content/uploads/2018/05/footerbg.png');
+}
+
+.mks_col {
+	max-width:1140px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+}
+
+.maillistform {
+	max-width:1140px !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+
+.maillistemail {
+	max-width:90% !important;
+	text-align:left;
+}
+.maillistname {
+	max-width:90% !important;
+	text-align:left;
+}
+.maillistemail input {
+    border-radius: 15px !important;
+    border: none !important;
+    background-color: #efefef !important;
+    font-family: Aileron !important;
+    font-size: 16px !important;
+    height: 45px !important;
+    padding: 15px !important;
+}
+.maillistname input {
+    border-radius: 15px !important;
+    border: none !important;
+    background-color: #efefef !important;
+    font-family: Aileron !important;
+    font-size: 16px !important;
+    height: 45px !important;
+    padding: 15px !important;
+}
+
+.mailformsubmit {
+    color: white !important;
+    background: transparent !important;
+    border: 1px solid white !important;
+    border-radius: 15px !important;
+    height: 40px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    font-size: 14px !important;
+	width:150px !important;
+}
+.mailfooterheading {
+	text-align:center;
+	font-size:28px;
+	color:white;
+	width:100%;
+	padding-top:30px;
+	font-family: Aileron;
+	font-weight:lighter;
+}
+
+.customfooter {
+	background-color:#f1f1f1;
+	width:100%;
+	height:250px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.customfooterinner {
+	max-width:1140px !important;
+	width:1140px;
+	position:absolute;
+	left:20%;
+	margin-top:20px;
+}
+
+.customfooter h3 {
+	font-size:22px;
+	color:#1999d6;
+}
+.copyright {
+	height:30px;
+	text-align:right;
+	max-width:1140px !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+.footermiddlecol {
+	margin-left:20px;
+}
+
+.optionimage {
+	border-radius:150px;
+	border:6px solid white;
+	width:180px;
+	z-index:999999;
+	position:relative;
+}
+
+.quicklinkcontainers {
+	max-width:1140px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-120px;
+}
+
+.quicklinkbox {
+	text-align:center;
+}
+
+.optiontext {
+	text-align:center;
+	font-family:Aileron;
+	font-size:14px;
+	max-width:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.optiontitle {
+	text-align:center;
+	font-family:Aileron;
+	font-weight:bolder;
+    text-transform: uppercase;
+}
+
+.optionbutton {
+    border: 2px solid #878787;
+    border-radius: 18px;
+    height: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #878787;
+    vertical-align: middle;
+    padding: 10px;
+    font-family: Aileron;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding-bottom: 14px;
+}
+
+#slider .featured-link a, .thinkupslider-sc .featured-link a {
+	border:none !important;
+	border-bottom: none !important;
+	border-color: transparent !important;
+	font-size:14px;
+
+}
+.featured-link {
+    border: 2px solid #878787;
+    border-radius: 18px;
+    height: 20px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #878787;
+    vertical-align: middle;
+    padding: 10px;
+    font-family: Aileron;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding-bottom: 14px;
+	background-color:transparent;
+}
+
+.featured-title span {
+	font-size:40px;
+    font-family: Aileron;
+}
+.featured-title {
+    font-family: Aileron;
+	font-weight:bold;
+	font-size:20px;
+}
+
+#slider .featured-excerpt span {
+    font-family: Aileron;
+	color:white !important;
+	font-size:16px;
+	padding: 0px;
+	margin:0px;
+}
+
+.titlebolder {
+	font-size:60px;
 }

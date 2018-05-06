@@ -14,31 +14,37 @@
 	</div>
 	</div><!-- #content -->
 
-	<footer>
-		<?php /* Custom Footer Layout */ consulting_thinkup_input_footerlayout();
-		echo	'<!-- #footer -->';  ?>
-		
-		<div id="sub-footer">
-
-		<div id="sub-footer-core">
-		
-			<div class="copyright">
-			<?php /* === Add custom footer === */ consulting_thinkup_input_copyright(); ?>
-			</div>
-			<!-- .copyright -->
-
-			<?php if ( has_nav_menu( 'sub_footer_menu' ) ) : ?>
-			<?php wp_nav_menu( array( 'depth' => 1, 'container_class' => 'sub-footer-links', 'container_id' => 'footer-menu', 'theme_location' => 'sub_footer_menu' ) ); ?>
-			<?php endif; ?>
-			<!-- #footer-menu -->
-
-		</div>
-		</div>
-	</footer><!-- footer -->
 
 </div><!-- #body-core -->
+<div class='mailfooter'>
+<h3 class='mailfooterheading'>Stay in touch &amp; subscribe to Advancer’s mailing list</h3>
+<?php echo do_shortcode("[wpforms id=\"11764\" title=\"false\" description=\"false\"]"); ?>
+
+</div>
 
 <?php wp_footer(); ?>
-
+</article>
+<div class="customfooter">
+	<div class="mks_col customfooterinner">
+			<div class="mks_one_third">
+				<div style='text-align:center;'>
+				<?php dynamic_sidebar( 'Footer-Column-1' ); ?>
+				</div>
+		    </div>
+			<div class="mks_one_third footermiddlecol">
+				<div style='text-align:center;'>
+				<?php dynamic_sidebar( 'Footer-Column-2' ); ?>
+				</div>
+			</div>
+			<div class="mks_one_third">
+				<div style='text-align:center;'>
+				<?php dynamic_sidebar( 'Footer-Column-3' ); ?>
+				</div>
+			</div>
+	</div>
+</div>
+<div class='copyright'>
+	&copy; Copyright 2018 Advancer Group Pty Ltd
+</div>
 </body>
 </html>
