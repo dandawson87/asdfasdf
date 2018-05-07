@@ -2011,8 +2011,8 @@ li.pag-next {
 	position: relative;
 	display: inline-block;
 	color: #FFF;
-	font-size: 48px;
-	font-weight: 400;
+	font-size: 30px;
+	font-weight: bold;
 	line-height: 1;
 }
 #slider .featured-title span:after,
@@ -7438,8 +7438,10 @@ body .fa-lg {
 .optiontext {
 	text-align:center;
 	font-family:Aileron;
-	font-size:14px;
-	max-width:200px;
+	font-size:16px;
+	font-weight:lighter;
+	color:#878787;
+	max-width:250px;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -7468,8 +7470,7 @@ body .fa-lg {
     letter-spacing: 3px;
     padding-bottom: 14px;
 }
-
-#slider .featured-link a, .thinkupslider-sc .featured-link a {
+#slider .featured-link a {
 	border:none !important;
 	border-bottom: none !important;
 	border-color: transparent !important;
@@ -7477,7 +7478,7 @@ body .fa-lg {
 
 }
 .featured-link {
-    border: 2px solid #878787;
+    border: 2px solid white;
     border-radius: 18px;
     height: 20px;
     width: 20%;
@@ -7495,6 +7496,14 @@ body .fa-lg {
 	background-color:transparent;
 }
 
+.featured-link a span {
+	background: none !important;
+	margin-bottom:10px;
+	background-color:transparent;
+	border:0px;
+	padding:0px;
+}
+
 .featured-title span {
 	font-size:40px;
     font-family: Aileron;
@@ -7503,14 +7512,16 @@ body .fa-lg {
     font-family: Aileron;
 	font-weight:bold;
 	font-size:20px;
+	margin-bottom:0px !important;
 }
 
 #slider .featured-excerpt span {
-    font-family: Aileron;
+    font-family: Aileron !important;
 	color:white !important;
-	font-size:16px;
-	padding: 0px;
-	margin:0px;
+	font-size:22px !important;
+	font-weight:lighter !important;
+	padding: 0px !important;
+	margin:0px !important;
 }
 
 .titlebolder {
